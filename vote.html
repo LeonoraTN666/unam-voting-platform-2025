@@ -10,14 +10,13 @@
     <h1>Vote for <span id="categoryName"></span></h1>
     
     <form id="voteForm">
-        <div id="candidatesContainer" class="category-section">
-            <!-- Candidates will be dynamically loaded here -->
+        <div id="candidatesContainer" class="candidates">
+            <!-- Candidates will be dynamically inserted here -->
         </div>
-
+        <p id="errorMessage" style="color: red;"></p>
         <button type="submit">Submit Vote</button>
     </form>
 
-    <p id="errorMessage" style="color: red; text-align: center;"></p>
     <button id="backBtn">Back to Categories</button>
 
     <script src="vote.js"></script>
