@@ -34,7 +34,7 @@ categoriesContainer.addEventListener('touchstart', function(event) {
     if (!isSpeaking) {
         isSpeaking = true;
         const speech = new SpeechSynthesisUtterance();
-        speech.text = "Please tap on a category to start voting. Your vote is anonymous. Double tap to zoom";
+        speech.text = "Please tap on a category to start voting. Your vote is anonymous.";
         speechSynthesis.speak(speech);
         speech.onend = () => {
             isSpeaking = false;
