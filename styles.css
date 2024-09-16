@@ -33,6 +33,14 @@ h1, h2 {
     text-align: center;  /* Centered the text */
 }
 
+.login-container input[type="text"], .login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
 /* Categories Page */
 .categories-container {
     text-align: center;
@@ -62,30 +70,40 @@ h1, h2 {
 }
 
 /* Voting Page */
-.voting-container {
+.vote-container {
     padding: 20px;
     text-align: center;
 }
 
-.candidates {
+.category-section {
+    margin-bottom: 20px;
+}
+
+.candidate {
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.candidates label {
-    display: block;
     margin: 10px;
-    text-align: center;
 }
 
-.candidates img {
+.candidate-image {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
-    display: block;
-    margin: 0 auto; /* Center the image */
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff0000; /* Changed to red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c30000; /* Changed to darker red */
 }
 
 /* Help Modal */
@@ -116,22 +134,17 @@ h1, h2 {
 
 .green-box {
     background-color: #d4edda;
-    color: #155724;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 10px;
     border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .thank-you-box {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    padding: 15px;
-    border-radius: 5px;
+    margin: 20px 0;
 }
 
-/* Buttons */
-button {
-    margin-top: 15px;
+.success-container button {
+    margin: 10px;
     padding: 10px 20px;
     background-color: #ff0000; /* Changed to red */
     color: white;
@@ -140,14 +153,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.success-container button:hover {
     background-color: #c30000; /* Changed to darker red */
-}
-
-.info-box {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 5px;
 }
