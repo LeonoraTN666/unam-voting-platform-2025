@@ -130,7 +130,7 @@ h1, h2 {
 button {
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff0000; /* Changed to red */
     color: white;
     border: none;
     border-radius: 5px;
@@ -138,5 +138,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c30000; /* Changed to darker red */
 }
