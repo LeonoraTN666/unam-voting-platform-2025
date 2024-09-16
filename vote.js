@@ -1,34 +1,28 @@
-const category = new URLSearchParams(window.location.search).get('category');
-document.getElementById('categoryName').textContent = category;
+// Get the category from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get('category');
+const categoryName = document.getElementById('categoryName');
 
-const categories = {
-    "President": "presidentCandidates",
-    "Vice President": "vicePresidentCandidates",
-    "Secretary": "secretaryCandidates"
-};
-
-document.querySelectorAll('.category-section').forEach(section => {
-    section.style.display = 'none';
-});
-
-const categorySectionId = categories[category];
-if (categorySectionId) {
-    document.getElementById(categorySectionId).style.display = 'block';
+if (category) {
+    categoryName.textContent = category;
 }
 
-// Handle vote submission
-document.getElementById('voteForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+// Handle form submission
+document.getElementById('voteForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
     const selectedCandidate = document.querySelector('input[name="candidate"]:checked');
+
     if (selectedCandidate) {
-        alert(`You voted for ${selectedCandidate.value}`);
-        window.location.href = 'success.html';
+        localStorage.setItem('votedCategory', category);
+        localStorage.setItem('votedCandidate', selectedCandidate.value);
+        window.location.href = 'success.html?category=' + encodeURIComponent(category);
     } else {
         alert('Please select a candidate.');
     }
 });
 
-// Back to categories
+// Back button functionality
 document.getElementById('backBtn').addEventListener('click', function() {
     window.location.href = 'categories.html';
 });
