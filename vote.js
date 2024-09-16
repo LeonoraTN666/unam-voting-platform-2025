@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     };
 
+    // Clear any existing candidates
+    candidatesContainer.innerHTML = '';
+
     // Load candidates based on selected category
     if (candidates[category]) {
         candidates[category].forEach(candidate => {
