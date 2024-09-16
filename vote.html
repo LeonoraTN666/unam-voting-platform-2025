@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting - UNAM Voting Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="voting-container">
+        <h2>Vote for the <span id="categoryTitle"></span></h2>
+
+        <!-- Candidates List -->
+        <div class="candidates">
+            <label>
+                <input type="radio" name="candidate" value="Candidate 1">
+                <img src="candidate1.jpg" alt="Candidate 1"> <!-- Add image -->
+                Candidate 1
+            </label>
+            <label>
+                <input type="radio" name="candidate" value="Candidate 2">
+                <img src="candidate2.jpg" alt="Candidate 2"> <!-- Add image -->
+                Candidate 2
+            </label>
+            <label>
+                <input type="radio" name="candidate" value="Candidate 3">
+                <img src="candidate3.jpg" alt="Candidate 3"> <!-- Add image -->
+                Candidate 3
+            </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="submitVoteBtn">Submit</button>
+    </div>
+
+    <script src="vote.js"></script>
+</body>
+</html>
