@@ -4,6 +4,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 h1, h2 {
@@ -25,10 +30,7 @@ h1, h2 {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-}
-
-.login-container h2 {
-    text-align: center;
+    text-align: center;  /* Centered the text */
 }
 
 /* Categories Page */
@@ -59,12 +61,31 @@ h1, h2 {
     font-size: 16px;
 }
 
-.info-box {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 5px;
+/* Voting Page */
+.voting-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.candidates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.candidates label {
+    display: block;
+    margin: 10px;
+    text-align: center;
+}
+
+.candidates img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: block;
+    margin: 0 auto; /* Center the image */
 }
 
 /* Help Modal */
@@ -85,24 +106,6 @@ h1, h2 {
     padding: 20px;
     text-align: center;
     border-radius: 5px;
-}
-
-/* Voting Page */
-.voting-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.candidates label {
-    display: block;
-    margin: 10px;
-}
-
-.candidates img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
 }
 
 /* Success Page */
@@ -139,4 +142,12 @@ button {
 
 button:hover {
     background-color: #c30000; /* Changed to darker red */
+}
+
+.info-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
 }
