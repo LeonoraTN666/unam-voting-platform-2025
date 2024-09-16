@@ -5,7 +5,7 @@ const username = localStorage.getItem('username') || 'Guest';
 
 // Display the greeting with the username
 const greetingElement = document.getElementById('greeting');
-greetingElement.textContent = `Hello, ${username}! Welcome to the voting platform.`;
+greetingElement.textContent = `Hello, ${username}! Welcome to the 2025 voting platform.`;
 
 // Handle logout functionality
 document.getElementById('logoutBtn').addEventListener('click', function() {
@@ -34,7 +34,7 @@ categoriesContainer.addEventListener('touchstart', function(event) {
     if (!isSpeaking) {
         isSpeaking = true;
         const speech = new SpeechSynthesisUtterance();
-        speech.text = "Please tap on a category to start voting. Your vote is anonymous. Double tap to zoom, and hold your finger for voice assistance.";
+        speech.text = "Please tap on a category to start voting. Your vote is anonymous. Double tap to zoom";
         speechSynthesis.speak(speech);
         speech.onend = () => {
             isSpeaking = false;
