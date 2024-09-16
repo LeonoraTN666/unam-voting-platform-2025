@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const candidatesContainer = document.getElementById('candidatesContainer');
     const errorMessage = document.getElementById('errorMessage');
 
+    // Set the category name in the header
     categoryNameElement.textContent = category;
 
-    // Sample candidates data
+    // Sample candidates data for each category
     const candidates = {
         President: [
             { name: "John Kambwa", img: "president1.jpg" },
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear any existing candidates
     candidatesContainer.innerHTML = '';
 
-    // Load candidates based on selected category
+    // Load candidates based on the selected category
     if (candidates[category]) {
         candidates[category].forEach(candidate => {
             const candidateDiv = document.createElement('div');
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Confirm submission
         if (confirm(`Are you sure you want to vote for ${selectedCandidate.value}?`)) {
-            // Handle successful vote (e.g., save vote and redirect)
+            // Redirect to success page with category
             window.location.href = 'success.html?category=' + encodeURIComponent(category);
         } else {
             errorMessage.textContent = "Vote cancelled.";
