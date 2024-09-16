@@ -1,5 +1,3 @@
-// categories.js
-
 // Retrieve the username from localStorage or sessionStorage
 const username = localStorage.getItem('username') || 'Guest';
 
