@@ -24,7 +24,31 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: "Janet Kavihuha", img: "secretary2.jpg" },
             { name: "David Nangolo", img: "secretary3.jpg" }
         ],
-        // Add other categories here
+        Finance: [
+            { name: "Peter Nambahu", img: "finance1.jpg" },
+            { name: "Mary Nkuna", img: "finance2.jpg" },
+            { name: "Elijah Shikongo", img: "finance3.jpg" }
+        ],
+        AcademicAffairs: [
+            { name: "Hannah Tjivinda", img: "academic1.jpg" },
+            { name: "Samuel Ndapanda", img: "academic2.jpg" },
+            { name: "Linda Haufiku", img: "academic3.jpg" }
+        ],
+        SportAndRecreation: [
+            { name: "Paul Katjivena", img: "sport1.jpg" },
+            { name: "Esther Nambahu", img: "sport2.jpg" },
+            { name: "Hendrik Shikongo", img: "sport3.jpg" }
+        ],
+        SocialAndCultural: [
+            { name: "Grace Shivute", img: "social1.jpg" },
+            { name: "Robert Shiweda", img: "social2.jpg" },
+            { name: "Elena Nakale", img: "social3.jpg" }
+        ],
+        PublicRelations: [
+            { name: "Charles Immanuel", img: "pr1.jpg" },
+            { name: "Debbie Muinjo", img: "pr2.jpg" },
+            { name: "Erastus Haufiku", img: "pr3.jpg" }
+        ]
     };
 
     // Load candidates based on selected category
