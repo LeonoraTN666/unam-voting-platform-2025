@@ -7,93 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="vote-container">
-        <h1>Vote for <span id="categoryName"></span></h1>
-        
-        <form id="voteForm">
-            <!-- President Category -->
-            <div id="presidentCandidates" class="category-section">
-                <h2>President</h2>
-                <div class="candidate">
-                    <img src="president1.jpg" alt="Candidate 1" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="John Kambwa">
-                        John Kambwa
-                    </label>
-                </div>
-                <div class="candidate">
-                    <img src="president2.jpg" alt="Candidate 2" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="Leonora Nashipeta">
-                        Leonora Nashipeta
-                    </label>
-                </div>
-                <div class="candidate">
-                    <img src="president3.jpg" alt="Candidate 3" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="Victor Sheefeni">
-                        Victor Sheefeni
-                    </label>
-                </div>
-            </div>
+    <h1>Vote for <span id="categoryName"></span></h1>
+    
+    <form id="voteForm">
+        <div id="candidatesContainer" class="category-section">
+            <!-- Candidates will be dynamically loaded here -->
+        </div>
 
-            <!-- Vice President Category -->
-            <div id="vicePresidentCandidates" class="category-section">
-                <h2>Vice President</h2>
-                <div class="candidate">
-                    <img src="vp1.jpg" alt="Candidate 1" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="Anna Nepolo">
-                        Anna Nepolo
-                    </label>
-                </div>
-                <div class="candidate">
-                    <img src="vp2.jpg" alt="Candidate 2" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="Matthew Hishoono">
-                        Matthew Hishoono
-                    </label>
-                </div>
-                <div class="candidate">
-                    <img src="vp3.jpg" alt="Candidate 3" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="Martha Muheua">
-                        Martha Muheua
-                    </label>
-                </div>
-            </div>
+        <button type="submit">Submit Vote</button>
+    </form>
 
-            <!-- Secretary Category -->
-            <div id="secretaryCandidates" class="category-section">
-                <h2>Secretary</h2>
-                <div class="candidate">
-                    <img src="secretary1.jpg" alt="Candidate 1" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="Samuel Amupolo">
-                        Samuel Amupolo
-                    </label>
-                </div>
-                <div class="candidate">
-                    <img src="secretary2.jpg" alt="Candidate 2" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="Janet Kavihuha">
-                        Janet Kavihuha
-                    </label>
-                </div>
-                <div class="candidate">
-                    <img src="secretary3.jpg" alt="Candidate 3" class="candidate-image">
-                    <label>
-                        <input type="radio" name="candidate" value="David Nangolo">
-                        David Nangolo
-                    </label>
-                </div>
-            </div>
-
-            <button type="submit">Submit Vote</button>
-        </form>
-
-        <button id="backBtn">Back to Categories</button>
-    </div>
+    <p id="errorMessage" style="color: red; text-align: center;"></p>
+    <button id="backBtn">Back to Categories</button>
 
     <script src="vote.js"></script>
 </body>
